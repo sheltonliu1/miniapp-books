@@ -1,0 +1,17 @@
+<!--pages/setting/setting.wxml-->
+<!--shelves.wxml-->
+<view class="container">
+  <view class="labels">
+    <view wx:for-items="{{labels}}" wx:key="{{index}}" class="label" data-label="{{item}}">
+      <text>{{item}}</text>
+      <button bindtap="removeLabel" data-id="{{index}}" size="mini" type="warn">删除</button>
+    </view>
+    <view class="label" wx:if="{{labels.length < 5}}">
+      <input placeholder="输入新标签" bindinput="inputLabel" value="{{newLabel}}"></input>
+      <button bindtap="addLabel" data-id="{{index}}" size="mini" type="primary" wx:if="{{labelVaild}}">添加</button>
+      <button disabled size="mini" type="primary" wx:if="{{!labelVaild}}">添加</button>
+    </view>
+    <button bindtap="saveLabel" size="mini">保存</button>
+  </view>
+</view>
+

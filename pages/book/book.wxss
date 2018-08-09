@@ -1,0 +1,42 @@
+/* pages/book/book.wxss */
+
+.bookcover {
+  margin-bottom: 30rpx;
+}
+
+.bookinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bookinfo .name {
+  width: 300rpx;
+  display: flex;
+  justify-content: flex-start;
+  margin: 10rpx;
+}
+.bookinfo .author {
+  width: 300rpx;
+  display: flex;
+  justify-content: flex-end;
+  margin: 10rpx;
+}
+
+.bookcomment, .booksummary {
+  width: 600rpx;
+  margin: 75rpx;
+  display: flex;
+}
+
+.book-text {
+  display: flex;
+  justify-content: center;
+  width: 700rpx;
+}
+.book-text view {
+  width: 300rpx;
+}
+.cur {
+  background: #00ffff
+}

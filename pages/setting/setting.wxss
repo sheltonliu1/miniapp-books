@@ -1,0 +1,16 @@
+/* pages/setting/setting.wxss */
+.labels {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20rpx;
+}
+
+.label text, .label input{
+  width: 400rpx;
+}

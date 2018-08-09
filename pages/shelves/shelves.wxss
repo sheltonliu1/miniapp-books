@@ -1,0 +1,44 @@
+/* pages/shelves/shelves.wxss */
+.book-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 700rpx;
+  font-size: 40rpx;
+}
+
+.books-container{
+  display: flex;
+  justify-content: flex-start;  
+  flex-wrap: wrap;
+  box-sizing: content-box;
+}
+.book-box{
+  width: 200rpx;
+  height: 300rpx;
+  background-color: #fff;
+  overflow: hidden;
+  margin: 24rpx;
+}
+.book-box .img-box{
+  width: 200rpx;
+  height: 200rpx;
+  overflow: hidden;
+}
+.book-box .img-box image{
+   width: 200rpx;
+   height: 200rpx;
+}
+.book-box .book-title{
+  width: 180rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 24rpx;
+  padding: 24rpx 0 0rpx 0;
+  color:#000;
+  margin-left: 24rpx;
+}
+
+.cur {
+  background: #00ffff;
+}

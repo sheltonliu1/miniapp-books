@@ -1,0 +1,25 @@
+<!--pages/book/book.wxml-->
+<view class='container'>
+  <view class='bookcover'>
+    <image src="{{book.cover}}" class="slide-image" width="355" height="150" mode="aspectFit" lazy-load="true"/>
+  </view>
+  <view class='bookinfo'>
+    <view class='name'><text>{{book.name}}</text></view>
+    <view class='author'><text>作者：{{book.author}}</text></view>
+  </view>
+  <view class="book-text">
+    <view bindtap="chooseTab" data-id="0" class="{{tab==0 ? 'cur' : ''}}">
+      <text>简介</text>
+    </view>
+    <view  bindtap="chooseTab" data-id="1" class="{{tab==1 ? 'cur' : ''}}">
+      <text>感想</text>
+    </view>
+  </view>
+  <view class='booksummary' wx:if="{{tab==0}}">
+    <text class="name">{{book.summary}}</text>
+  </view>
+  <view class='bookcomment' wx:if="{{tab==1}}">
+    <text class="name">{{book.thoughts}}</text>
+  </view>
+</view>
+

@@ -1,0 +1,24 @@
+<!--shelves.wxml-->
+<view class="container">
+  <view class="book-labels">
+    <view bindtap="chooseLabel" data-label="全部"  class="{{label=='全部'?'cur':''}}">
+      <text>全部</text>
+    </view>
+    <view wx:for-items="{{labels}}" wx:key="{{index}}" class="{{label==item?'cur':''}}" data-label="{{item}}" bindtap="chooseLabel">
+      <text>{{item}}</text>
+    </view>
+  </view>
+  <view class="books-container">
+        <view class="book-box" wx:for-items="{{bookList}}" wx:key="{{isbn}}" bindtap="toDetailsTap" data-isbn="{{item.isbn}}">
+           <view class="img-box">
+              <image src="{{item.cover}}" class="image" mode="aspectFill" lazy-load="true"/>
+           </view>
+           <view class="book-title">{{item.name}}</view>
+        </view>
+        <view class="book-box" wx:if="{{label == '全部'}}">
+          <view class="img-box">
+            <image src="../../images/add-book.png" class="image"  bindtap="addBook" lazy-load="true"/>
+          </view>
+        </view>
+    </view>
+</view>
