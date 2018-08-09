@@ -9,3 +9,16 @@
   box-sizing: border-box;
   font-size: 30rpx;
 } 
+
+.cloumn-center {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 100%;
+}
+
+.option-buttons {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}

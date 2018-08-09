@@ -19,7 +19,17 @@
     <text class="name">{{book.summary}}</text>
   </view>
   <view class='bookcomment' wx:if="{{tab==1}}">
-    <text class="name">{{book.thoughts}}</text>
+    <view wx:if="{{!isEdit}}" class="cloumn-center">
+      <text class="name">{{book.thoughts}}</text>
+      <button bindtap="editThoughts" size='mini'>编辑感想</button>
+    </view>
+    <view wx:if="{{isEdit}}" class="cloumn-center">
+      <textarea value="{{book.thoughts}}" bindinput='inputThoughts'></textarea>
+      <view class='option-buttons'>
+        <button bindtap="saveThoughts" size='mini' type='primary'>保存</button>
+        <button bindtap="cancelEditThoughts" size='mini'>取消</button>
+      </view>
+    </view>
   </view>
 </view>
 
