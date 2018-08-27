@@ -8,10 +8,11 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"nodeModules": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.2.2",
+	"libVersion": "2.2.3",
 	"appid": "wx5e5e81861efd893e",
 	"projectname": "zhiyinyun",
 	"cloudfunctionRoot": "functions",

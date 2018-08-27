@@ -17,7 +17,7 @@
         </view>
         <view class="book-box" wx:if="{{label == '全部'}}">
           <view class="img-box">
-            <image src="../../images/add-book.png" class="image"  bindtap="addBook" lazy-load="true"/>
+            <van-button type="primary" bindtap="addBook">添加</van-button>
           </view>
         </view>
     </view>

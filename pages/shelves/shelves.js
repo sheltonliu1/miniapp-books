@@ -1,5 +1,7 @@
 // pages/shelves/shelves.js
 var util = require('../../utils/util.js');
+const vant = require('vant-weapp');
+
 var app = getApp();
 const db = app.globalData.db;
 const user = app.globalData.userInfo;
@@ -60,7 +62,9 @@ Page({
 
     this.getBooks();
   },
-
+  onPullDownRefresh: function() {
+    this.getBooks();
+  },
   onShow: function () {
     console.log('show')
     this.setData({ labels: app.globalData.labels })
@@ -90,7 +94,7 @@ Page({
           mask: true
         })
         wx.request({
-          url: 'https://ultimathule.cn/v2/book/isbn/'+res.result,
+          url: 'https://ultimathule.cn/douban/book/isbn/'+res.result,
           header: {
             'content-type': 'application/text'
           },

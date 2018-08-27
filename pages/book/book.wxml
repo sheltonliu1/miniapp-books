@@ -1,7 +1,7 @@
 <!--pages/book/book.wxml-->
 <view class='container'>
   <view class='bookcover'>
-    <image src="{{book.cover}}" class="slide-image" width="355" height="150" mode="aspectFit" lazy-load="true"/>
+    <image src="{{book.cover}}" class="slide-image" width="355" height="150" mode="aspectFit" lazy-load="true" bindtap="changeCover"/>
   </view>
   <view class='bookinfo'>
     <view class='name'><text>{{book.name}}</text></view>
